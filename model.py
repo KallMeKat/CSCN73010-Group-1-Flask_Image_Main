@@ -1,12 +1,12 @@
-# Importing required libs
+import os
 from keras.models import load_model
 from keras.utils import img_to_array
 import numpy as np
 from PIL import Image
 
 # Loading model
-model = load_model("C:/Users/super/Documents/GitHub/CSCN73010-Group-1-Flask_Image_Main/digit_model.h5")
-
+model_path = os.path.join(os.path.dirname(__file__), "digit_model.h5")
+model = load_model(model_path)
 
 # Preparing and pre-processing the image
 def preprocess_img(img_path):
