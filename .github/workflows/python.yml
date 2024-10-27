@@ -33,7 +33,6 @@ jobs:
 
     - name: Run pylint
       run: |
-        # Run pylint on the specified directories/files
         pylint tests model
       working-directory: .
 

@@ -5,6 +5,7 @@ import numpy as np
 from PIL import Image
 
 # Loading model
+
 model_path = os.path.join(os.path.dirname(__file__), "digit_model.h5")
 model = load_model(model_path)
 
