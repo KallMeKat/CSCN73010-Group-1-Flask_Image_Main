@@ -1,13 +1,12 @@
+from io import BytesIO
+from unittest.mock import patch, MagicMock
 
-import sys
-import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from PIL import Image
 
 import numpy as np
-from unittest.mock import patch, MagicMock
-from io import BytesIO
-from PIL import Image
-from model import preprocess_img, predict_result
+
+from ..model import preprocess_img, predict_result
+
 
 # Test preprocess_img
 def test_preprocess_img():
