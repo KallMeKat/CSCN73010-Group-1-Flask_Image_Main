@@ -29,7 +29,8 @@ jobs:
     - name: Run pylint
       run: |
         # Run pylint on the specified directories/files
-        pylint app.py model.py tests/tests_model.py
+        pylint tests model
+      working-directory: .
 
     - name: Run pytest
       run: |
