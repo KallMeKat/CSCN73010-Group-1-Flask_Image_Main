@@ -5,7 +5,7 @@ from PIL import Image
 
 import numpy as np
 
-from ..model import preprocess_img, predict_result
+from model import preprocess_img, predict_result
 
 
 # Test preprocess_img
