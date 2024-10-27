@@ -1,4 +1,4 @@
-#!C:\Users\super\repos\CSCN73010-Group-1-Flask_Image_Main\enviro-3.10\Scripts\python.exe
+#!C:\Users\super\Documents\GitHub\CSCN73010-Group-1-Flask_Image_Main\enviro-3.10\Scripts\python.exe
 #
 # Author: Mike McKerns (mmckerns @caltech and @uqfoundation)
 # Copyright (c) 2008-2016 California Institute of Technology.
@@ -19,3 +19,4 @@ if __name__ == '__main__':
     import dill
     for file in sys.argv[1:]:
         print (dill.load(open(file,'rb')))
+

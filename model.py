@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image
 
 # Loading model
-model = load_model("C:/Users/super/repos/CSCN73010-Group-1-Flask_Image_Main/digit_model.h5")
+model = load_model("C:/Users/super/Documents/GitHub/CSCN73010-Group-1-Flask_Image_Main/digit_model.h5")
 
 
 # Preparing and pre-processing the image
