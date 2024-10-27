@@ -1,0 +1,17 @@
+default_language_version:
+  python: python3.10  # Replace with your exact Python version if different
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+
+repos:
+  - repo: https://github.com/pycqa/pylint
+    rev: v2.15.0  # Latest stable version of pylint
+    hooks:
+      - id: pylint
+        language: system
+        entry: C:/Users/super/repos/CSCN73010-Group-1-Flask_Image_Main/enviro-3.10/Scripts/python.exe -m pylint
