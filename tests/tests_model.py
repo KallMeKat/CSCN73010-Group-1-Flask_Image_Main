@@ -51,4 +51,3 @@ def test_predict_result(mock_model):
 
     # Evaluate the prediction output
     assert result == 2, "predict_result returned an unexpected class index."
-
