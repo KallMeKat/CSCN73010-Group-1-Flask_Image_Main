@@ -25,6 +25,20 @@ def test_preprocess_img():
     assert (processed_img >= 0).all() and (processed_img <= 1).all(), "Processed image has incorrect pixel values."
 
 # Test predict_result
+@patch("model.model")
+def test_predict_result_all_zero_predictions(mock_model):
+    # Mock predict method to return all-zero probabilities
+    mock_predict_output = np.array([[0.0, 0.0, 0.0]])  # All-zero probabilities
+    mock_model.predict = MagicMock(return_value=mock_predict_output)
+
+    # Run predict_result with a dummy input
+    dummy_input = np.zeros((1, 224, 224, 3))
+    result = predict_result(dummy_input)
+
+    # Evaluate output
+    assert result == 0, "predict_result did not return index 0 for all-zero probabilities."
+
+
 @patch("model.model")  # Mock the model
 def test_predict_result(mock_model):
     # Mock predict method
@@ -37,3 +51,4 @@ def test_predict_result(mock_model):
 
     # Evaluate the prediction output
     assert result == 2, "predict_result returned an unexpected class index."
+
